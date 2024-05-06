@@ -9,13 +9,13 @@ import org.mockito.kotlin.doAnswer
 import org.mockito.kotlin.mock
 import java.util.*
 
-class DiceCubeMockedTest{
+class DiceCubeMockedTest {
 
     // specifying the seed makes the "random" sequence always the same
     private var count = 0
-    private val mockRandom: Random = mock<Random>{
-        on {nextInt(1,7)} doAnswer {
-            1 + (count++)%6
+    private val mockRandom: Random = mock<Random> {
+        on { nextInt(1, 7) } doAnswer {
+            1 + (count++) % 6
         }
     }
     private val diceCube: DiceCube = DiceCube(random = mockRandom)
@@ -32,7 +32,7 @@ class DiceCubeMockedTest{
 
     @Test
     fun roll() {
-        for(repetition: Int in 1..20 ){
+        for (repetition: Int in 1..20) {
             print("repetition %02d ".format(repetition))
             diceCube.roll()
             val value = diceCube.value
