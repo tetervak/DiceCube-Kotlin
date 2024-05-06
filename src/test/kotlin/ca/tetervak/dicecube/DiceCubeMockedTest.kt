@@ -11,7 +11,7 @@ import java.util.*
 
 class DiceCubeMockedTest {
 
-    // specifying the seed makes the "random" sequence always the same
+    // Mocking the Random to produce 1,2,3,4,5,6,1,2,3,4,5,6,1,2, etc.
     private var count = 0
     private val mockRandom: Random = mock<Random> {
         on { nextInt(1, 7) } doAnswer {
