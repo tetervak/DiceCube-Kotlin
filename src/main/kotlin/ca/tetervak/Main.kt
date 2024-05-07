@@ -1,6 +1,6 @@
 package ca.tetervak
 
-import ca.tetervak.ca.tetervak.dicecube.DiceCube
+import ca.tetervak.dicecube.DiceCube
 import java.util.*
 
 fun main() {
