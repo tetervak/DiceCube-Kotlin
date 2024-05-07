@@ -1,4 +1,4 @@
-package ca.tetervak.ca.tetervak.dicecube
+package ca.tetervak.dicecube
 
 import java.lang.IllegalArgumentException
 import java.util.Random
