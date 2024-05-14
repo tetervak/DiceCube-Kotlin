@@ -1,8 +1,7 @@
 package ca.tetervak.dicecube
 
 import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertThrows
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -56,8 +55,8 @@ class DiceCubeTest {
             diceCube.roll()
             val value = diceCube.value
             println("value = $value")
-            assert(value > 0)
-            assert(value <= 6)
+            assertTrue(value > 0)
+            assertTrue(value <= 6)
         }
     }
 
