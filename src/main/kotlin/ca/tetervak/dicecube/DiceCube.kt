@@ -5,7 +5,6 @@ import java.util.Random
 
 // One die object, for random values from 1 to 6
 class DiceCube(
-    val initValue: Int = DEFAULT_INIT_VALUE,
     private val random: Random = Random()
 ) {
 
@@ -22,16 +21,12 @@ class DiceCube(
             }
         }
 
-    init {
-        value = initValue
-    }
-
     fun roll() {
         value = random.nextInt(1,7)
     }
 
     fun reset() {
-        value = initValue
+        value = DEFAULT_INIT_VALUE
     }
 
     override fun toString() = "DiceCube(value = $value)"

@@ -39,14 +39,6 @@ class DiceCubeTest {
         }
     }
 
-    @Test
-    fun init_Valid() {
-        println("use init value 0; check throwing exception")
-        assertThrows(IllegalArgumentException::class.java) {
-            DiceCube(initValue = 0)
-        }
-    }
-
 
     @Test
     fun roll() {
@@ -66,6 +58,6 @@ class DiceCubeTest {
         println("before reset value = ${diceCube.value}")
         diceCube.reset()
         println("after reset value = ${diceCube.value}")
-        assertEquals(diceCube.initValue, diceCube.value)
+        assertEquals(DiceCube.DEFAULT_INIT_VALUE, diceCube.value)
     }
 }
